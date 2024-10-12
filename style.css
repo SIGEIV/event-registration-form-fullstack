@@ -1,0 +1,278 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #9b59b6, #2ecc71); /* Purple to Lime Green Gradient */
+    color: red; /* Dark Gray Text */
+    margin: 0;
+    padding: 0;
+    animation: fadeInBody 1s ease-in;
+    background-attachment: fixed;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Subtle Pattern Background */
+body:before {
+    content: "";
+    background-image: url('background-pattern.png'); /* Replace with a subtle pattern */
+    opacity: 0.05;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: repeat;
+}
+
+/* Form Container */
+.form-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: darkred; /* Soft Peach Background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+    animation: slideInForm 1s ease-out;
+    border: 1px solid rgba(155, 89, 182, 0.2); /* Soft Purple Border */
+    background: linear-gradient(135deg, #ffffff, #f9f2ec); /* Light Gradient */
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.form-container:hover {
+    transform: scale(1.01);
+}
+
+/* Decorative Circles */
+.form-container:before,
+.form-container:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+}
+
+.form-container:before {
+    top: -60px;
+    left: -60px;
+    width: 250px;
+    height: 250px;
+    background-color: #9b59b6; /* Purple */
+}
+
+.form-container:after {
+    bottom: -60px;
+    right: -60px;
+    width: 250px;
+    height: 250px;
+    background-color: #2ecc71; /* Lime Green */
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #2ecc71; /* Lime Green Header */
+    font-size: 2.5em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    animation: fadeInHeader 1.5s ease-in-out;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section Titles */
+h2 {
+    color: #9b59b6; /* Purple Section Titles */
+    margin-bottom: 10px;
+    font-size: 1.7em;
+    border-bottom: 2px solid #2ecc71; /* Lime Green Underline */
+    padding-bottom: 5px;
+    animation: fadeInSection 1s ease-in-out;
+}
+
+/* Form Inputs */
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+select, 
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1em;
+    background: #fdfdfd; /* Light Background for Inputs */
+    transition: all 0.3s ease;
+    animation: fadeInInput 1s ease-in-out;
+}
+
+/* Hover and Focus Effects */
+input[type="text"]:hover, 
+input[type="email"]:hover, 
+input[type="tel"]:hover, 
+select:hover, 
+input[type="file"]:hover {
+    border-color: #9b59b6; /* Purple Hover Border */
+    box-shadow: 0 0 15px rgba(155, 89, 182, 0.4); /* Purple Glow */
+}
+
+input:focus {
+    border-color: #2ecc71; /* Lime Green Focus Border */
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.3); /* Lime Glow */
+}
+
+/* Button Styling */
+button[type="submit"] {
+    background-color: #9b59b6; /* Purple Button */
+    color: white;
+    padding: 14px 30px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(155, 89, 182, 0.3); /* Purple Button Shadow */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    animation: popInButton 1s ease-in-out;
+}
+
+button[type="submit"]:hover {
+    background-color: #8e44ad; /* Darker Purple Hover */
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(155, 89, 182, 0.5);
+}
+
+/* Form Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    animation: fadeInTable 1s ease-in-out;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #9b59b6; /* Purple Table Header */
+    color: white;
+}
+
+td {
+    background-color: #f0faff; /* Light Peach Background for Table Rows */
+}
+
+table tr:hover {
+    background-color: #f5f5f5; /* Light Gray Hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .form-container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button[type="submit"] {
+        font-size: 1.1em;
+    }
+}
+
+/* Animations */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInForm {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInHeader {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInInput {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes popInButton {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Technology Conference Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Annual Technology Conference Registration</h1>
+        <form action="process.php" method="POST" enctype="multipart/form-data" id="registrationForm">
+            <!-- Personal Information Section -->
+            <h2>Personal Information</h2>
+            <input type="text" name="fullName" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <select name="gender">
+                <option value="" disabled selected>Gender (optional)</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" name="affiliation" placeholder="University/Company Affiliation" required>
+
+            <!-- Workshop Selection Section -->
+            <h2>Workshop Selection (Choose up to 2)</h2>
+            <select name="workshops[]" multiple required>
+                <option value="AI & Machine Learning">AI & Machine Learning</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Web Development">Web Development</option>
+            </select>
+
+            <!-- Meal Preferences Section -->
+            <h2>Meal Preferences</h2>
+            <label><input type="radio" name="meal" value="Vegetarian" required> Vegetarian</label>
+            <label><input type="radio" name="meal" value="Vegan"> Vegan</label>
+            <label><input type="radio" name="meal" value="Gluten-Free"> Gluten-Free</label>
+            <label><input type="radio" name="meal" value="Standard"> Standard</label>
+
+            <!-- Payment Section -->
+            <h2>Payment Details</h2>
+            <select name="paymentMethod" required>
+                <option value="" disabled selected>Payment Method</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Mpesa">Mpesa</option>
+                <option value="PayPal">PayPal</option>
+            </select>
+
+            <!-- File Upload -->
+            <h2>Upload Special Documentation (Optional)</h2>
+            <input type="file" name="document" accept=".pdf,.jpg,.png">
+
+            <!-- Terms and Conditions -->
+            <label>
+                <input type="checkbox" name="terms" required>
+                I agree to the <a href="#">Terms and Conditions</a>
+            </label>
+
+            <!-- CAPTCHA Placeholder -->
+            <div class="captcha">
+                <!-- Implement CAPTCHA service here -->
+                <p>CAPTCHA will be implemented here.</p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
