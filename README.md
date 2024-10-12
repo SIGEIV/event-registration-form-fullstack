@@ -1,2 +1,2 @@
 # event-registration-form-fullstack
-event registration form for capturin dat
+event registration form for capturin data
